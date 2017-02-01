@@ -1,0 +1,1 @@
+"use strict";chrome.runtime.onMessage.addListener(function(a,b,c){if("fetchSong"==a.action){var d=document.getElementById("eow-title").innerText;c({action:"sendSong",song:d})}});
