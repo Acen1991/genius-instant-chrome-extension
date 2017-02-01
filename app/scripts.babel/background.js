@@ -12,7 +12,7 @@ chrome.browserAction.onClicked.addListener(tab => {
 		}, response => {
 			if(response && response.action == "sendSong" && response.song && typeof response.song === "string"){
 				const normalizedYoutubeTitle = encodeURIComponent(normalize(response.song));
-				const access_token = "OElEA-q64Qtuynf70UHumI_YqVs6MwnRlog8QTkqjM_tmsWAv0_cTIn0pdTzs3IT";
+				const access_token = "__REPLACE__";
 
 				fetch(`https://api.genius.com/search?access_token=${access_token}&q=${normalizedYoutubeTitle}`)
 				.then(response => {
